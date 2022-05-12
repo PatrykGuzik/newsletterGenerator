@@ -47,3 +47,20 @@ function update() {
 	Field.drawNewsletter()
 	Field.drawHtmlFields()
 }
+
+
+function copyHTML(){
+	const code = document.querySelector(".code-area")
+	const btn = document.querySelector("#copy-btn")
+	// code.select();
+	navigator.clipboard.writeText(code.innerText);
+
+	btn.innerHTML = "Skopiowano"
+	setTimeout(() => {
+		btn.innerHTML = "kopiuj HTML"
+	}, 2000);
+}
+
+// do stylizacji:
+FieldParagraph.makeNewImageField()
+FieldImage.makeNewImageField()

@@ -64,8 +64,8 @@ class FieldImage extends Field {
 	getFieldHTML() {
 		return `
         <div data-n='${this.nbField}' class="field">
-            img link: <input data-n='${this.nbField}l' type="text">
-            odnośnik: <input data-n='${this.nbField}o' type="text">
+            <input data-n='${this.nbField}l' type="text" placeholder="link do obrazu">
+            <input data-n='${this.nbField}o' type="text" placeholder="odnośnik">
             <button data-n='${this.nbField}x'>X</button>
         </div>
         `;
@@ -86,11 +86,6 @@ class FieldImage extends Field {
             this.contentHTML = getImage(this.img,this.link);
 		});
 
-		// input2.addEventListener("input", () => {
-        //     this.img = input1.value;
-        //     this.link = input2.value
-        //     this.contentHTML = getImage(this.img,this.link);
-		// });
 
 		removeBtn.addEventListener("click", () => {
 			let newArray = [];
@@ -137,13 +132,22 @@ class FieldParagraph extends Field {
 	getFieldHTML() {
 		return `
         <div data-p='${this.nbField}' class="field">
-            Tytuł: <input data-p='${this.nbField}ty' type="text">
-            Treść: <textarea data-p='${this.nbField}tr' cols="30" rows="10"></textarea>
-            Obraz: <input data-p='${this.nbField}o' type="text">
-            btn1: <input data-p='${this.nbField}btn1' type="text">
-            btn1-link: <input data-p='${this.nbField}btn1link' type="text">
-            btn2: <input data-p='${this.nbField}btn2' type="text">
-            btn2-link: <input data-p='${this.nbField}btn2link' type="text">
+			<input data-img data-p='${this.nbField}o' type="text" placeholder="link do obrazu">
+            <input data-title data-p='${this.nbField}ty' type="text" placeholder="Tytuł">
+            <textarea data-area data-p='${this.nbField}tr' cols="30" rows="10" placeholder="Treść"></textarea>
+            
+			<div class="edit-btns">
+				<div class="edit-btn">
+					<input data-p='${this.nbField}btn1' type="text" placeholder="przycisk 1">
+					<input data-p='${this.nbField}btn1link' type="text" placeholder="przycisk 1 - odnośnik">
+				</div>
+				
+				<div class="edit-btn"> 
+					<input data-p='${this.nbField}btn2' type="text" placeholder="przycisk 2">
+					<input data-p='${this.nbField}btn2link' type="text" placeholder="przycisk 2 - odnośnik">
+				</div>
+			</div>
+
             <button data-p='${this.nbField}x'>X</button>
         </div>
         `;

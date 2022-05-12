@@ -237,7 +237,7 @@ const getParagraph = (header, content, img=null, btn1, btn1Link, btn2, btn2Link)
         btns = `
         <p>
             <a style="text-decoration:none; border: 1px solid green; padding:12px; border-radius: 20px; color:green;"
-                href="${btn1Link}"> ${btn1}
+                href="${btn1Link}" target="_blank"> ${btn1}
             </a>
         </p>
         `
@@ -247,11 +247,11 @@ const getParagraph = (header, content, img=null, btn1, btn1Link, btn2, btn2Link)
         btns = `
         <p>
             <a style="text-decoration:none; border: 1px solid green; padding:12px; border-radius: 20px; color:green; margin-right:5px"
-                href="${btn1Link}"> ${btn1}
+                href="${btn1Link}" target="_blank"> ${btn1}
             </a>
             
             <a style="text-decoration:none; border: 1px solid green; padding:12px; border-radius: 20px; color:green; margin-left:5px"
-                href="${btn2Link}"> ${btn2}
+                href="${btn2Link}" target="_blank"> ${btn2}
             </a>
         </p>
         `

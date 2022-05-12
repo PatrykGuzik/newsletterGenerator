@@ -11,14 +11,7 @@ body{
     justify-content: space-around;
 }
 
-.code-area{
-    background-color: rgb(165, 165, 165);
-    padding: 0 20px;
-    margin-top: 20px;
-    width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 
 .container{
     width: 500px;
@@ -43,8 +36,67 @@ body{
 }
 
 .field{
-    margin-bottom: 15px;
+    display: flex;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    background-color: white;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+}
+
+.edit{
+    background-color:#f2f2f2 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.field button{
+    background-color: white;
+    border: none;
+    position: absolute;
+    right:2px;
+    top: 2px
+}
+.field button:hover{
+    cursor: pointer;
+}
+
+.edit-btns{
+    display: flex;
+}
+
+.edit-btn{
+    display: flex;
+    flex-direction: column;
+}
+
+[data-title]{
+    font-size: 20px;
+}
+
+.edit-btn [data-p]:first-child{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid green;
+    color: green;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+
+/* PARAGRAPH */
+
+[data-img], [data-title], [data-area], .edit-btns{
+    margin-top: 10px;
+}
+
+.code-area{
+    background-color: #f2f2f2;
+    padding: 0 20px;
+    margin-top: 20px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
