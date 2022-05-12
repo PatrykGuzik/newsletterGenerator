@@ -1,0 +1,50 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.workspace{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.code-area{
+    background-color: rgb(165, 165, 165);
+    padding: 0 20px;
+    margin-top: 20px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.container .block{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+}
+
+.container textarea{
+    width: 400px;
+}
+
+.navbar{
+    margin-bottom: 50px;
+}
+
+.field{
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
