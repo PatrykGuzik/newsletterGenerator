@@ -1,15 +1,3 @@
-class Segment{
-
-}
-
-class ImageSegment{
-
-}
-
-class ParagraphSegment{
-    
-}
-
 const head = `
 <html>
 
@@ -51,7 +39,7 @@ const foot = `
                             style="width: 120px;">
                             <tbody>
                                 <tr>
-                                    <td><a style="margin-left: 7px;"
+                                    <td><a style="margin-left: 10px;"
                                             href="https://carbonfootprintfoundation.com/?utm_source=carbon_foundation&amp;utm_medium=email&amp;utm_campaign=newsletter"><img
                                                 src="	https://s-img.s3-eu-west-1.amazonaws.com/qfm4vxy61zjtvmay.png" /></a>
                                     </td>
@@ -105,7 +93,7 @@ const foot = `
                     </td>
                     <td>
                         <table border="0" cellpadding="0" cellspacing="0"
-                            style="width: 200px;">
+                            style="width: 100px;">
                             <tbody>
                                 <tr>
                                     <td

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="inst.css">
+</head>
+
+
+<body>
+    
+    <div class="container">
+
+        <h3>Pogrubienie</h3>
+        <p>Lorem <b> ipsum </b> dolor</p>
+        <div class="copy">Lorem &lt;b&gt; ipsum &lt;/b&gt; dolor </div>
+
+        <br>
+        
+        <h3>Podkreślenie</h3>
+        <p>Lorem <u> ipsum </u> dolor <br></p>
+        <div class="copy">Lorem &lt;u&gt; ipsum &lt;/u&gt; dolor</div>
+
+        <br>
+
+        <h3>Link</h3>
+        Generuj link:
+        <br>
+        <input data-nazwa type="text" placeholder="nazwa">
+        <input data-link type="text" placeholder="odnośnik">
+        <button onclick="generate()">Generuj</button>
+        <div class="link-box"></div>
+
+
+        <br>
+
+        <h3>Nowa linijka</h3>
+        <div class="copy">&lt;br&gt;</div>
+
+        <br>
+
+        <h3>Nowy akapit</h3>
+        <div class="copy">&lt;br&gt;&lt;br&gt;</div>
+
+
+        <br>
+
+    </div>
+
+    <script>
+        function generate() {
+            const name = document.querySelector('[data-nazwa]').value
+            const link = document.querySelector('[data-link]').value
+            const linkBox = document.querySelector('.link-box')
+
+            const linkHTML = `
+            <a style="color:green" href="${link}" target="_blank">${name}</a>
+            `
+            console.log(linkHTML);
+            linkBox.textContent = linkHTML
+        }
+
+    </script>
+</body>
+</html>
