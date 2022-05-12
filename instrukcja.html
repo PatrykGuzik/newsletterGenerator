@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,17 +11,19 @@
 
 
 <body>
-    
+
     <div class="container">
 
         <h3>Pogrubienie</h3>
         <p>Lorem <b> ipsum </b> dolor</p>
+        <button id="b" type="button" onclick="copyB()">kopiuj</button>
         <div class="copy">Lorem &lt;b&gt; ipsum &lt;/b&gt; dolor </div>
 
         <br>
-        
+
         <h3>Podkreślenie</h3>
         <p>Lorem <u> ipsum </u> dolor <br></p>
+        <button id="u" type="button" onclick="copyU()">kopiuj</button>
         <div class="copy">Lorem &lt;u&gt; ipsum &lt;/u&gt; dolor</div>
 
         <br>
@@ -30,18 +33,20 @@
         <br>
         <input data-nazwa type="text" placeholder="nazwa">
         <input data-link type="text" placeholder="odnośnik">
-        <button onclick="generate()">Generuj</button>
+        <button  onclick="generate()">Generuj</button><button id="link" type="button" onclick="copyLink()">kopiuj</button>
         <div class="link-box"></div>
 
 
         <br>
 
         <h3>Nowa linijka</h3>
+        <button id="br" type="button" onclick="copyBR()">kopiuj</button>
         <div class="copy">&lt;br&gt;</div>
 
         <br>
 
         <h3>Nowy akapit</h3>
+        <button id="space" type="button" onclick="copySpace()">kopiuj</button>
         <div class="copy">&lt;br&gt;&lt;br&gt;</div>
 
 
@@ -62,6 +67,48 @@
             linkBox.textContent = linkHTML
         }
 
+        function copyB() {
+            const b = document.querySelector("#b")
+            navigator.clipboard.writeText("<b></b>");
+            wasCopied(b)
+
+        
+        }
+
+        function copyU() {
+            const u = document.querySelector("#u")
+            navigator.clipboard.writeText("<u></u>");
+            wasCopied(u)
+        }
+
+        function copyLink() {
+            const l = document.querySelector("#link")
+            const link = document.querySelector(".link-box")
+            navigator.clipboard.writeText(link.innerText);
+            wasCopied(l)
+        }
+
+        function copyBR(){
+            const br = document.querySelector("#br")
+            navigator.clipboard.writeText("<br>");
+            wasCopied(br)
+        }
+
+        function copySpace(){
+            const space = document.querySelector("#space")
+            navigator.clipboard.writeText("<br><br>");
+            wasCopied(space)
+        }
+
+
+        function wasCopied(btn) {
+            btn.innerHTML = "skopiowano"
+            setTimeout(() => {
+                btn.innerHTML = "kopiuj"
+            }, 1500);
+        }
+
     </script>
 </body>
+
 </html>
