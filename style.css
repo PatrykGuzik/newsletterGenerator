@@ -153,3 +153,12 @@ button:hover{
     margin-left: auto;
     margin-right: auto;
 }
+
+/* Input */
+
+input[type=text]{
+    border: none;
+    border-bottom: 1px solid rgb(83, 83, 83);
+    margin: 4px;
+    width: 70%;
+}
