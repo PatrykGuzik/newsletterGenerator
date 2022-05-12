@@ -62,5 +62,5 @@ function copyHTML(){
 }
 
 // do stylizacji:
-FieldParagraph.makeNewImageField()
 FieldImage.makeNewImageField()
+FieldParagraph.makeNewImageField()

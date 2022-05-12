@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
 body{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Poppins', sans-serif;
 }
 
 .workspace{
@@ -11,21 +14,12 @@ body{
     justify-content: space-around;
 }
 
-
-
 .container{
     width: 500px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
 }
 
-.container .block{
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    background-color: antiquewhite;
-}
 
 .container textarea{
     width: 400px;
@@ -44,14 +38,29 @@ body{
     align-items: center;
     position: relative;
     padding: 10px;
+    border-radius: 8px;
 }
 
 .edit{
+    margin-top: 20px;
     background-color:#f2f2f2 ;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
 }
+
+/* Przyciski */
+
+button{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
 .field button{
     background-color: white;
     border: none;
@@ -59,6 +68,49 @@ body{
     right:2px;
     top: 2px
 }
+
+.navbar{
+    width: 100%;
+}
+.navbar div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar div button{
+    width: 48%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar button, .update-btn, #copy-btn{
+    border: 2px solid grey;
+    color: gray;
+    /* width: 200px; */
+    padding: 8px 0;
+    font-weight: 600;
+    border-radius: 8px;
+    text-transform: uppercase;
+}
+
+
+.navbar button:hover, .update-btn:hover, #copy-btn:hover{
+    border: 2px solid rgb(59, 59, 59);
+    color: rgb(59, 59, 59);
+}
+
+#copy-btn{
+    width: 740px;
+    padding: 8px 0;
+}
+
+.update-btn{
+    margin-top: 10px;
+    width: 100%;
+}
+
+
 .field button:hover{
     cursor: pointer;
 }
@@ -72,6 +124,7 @@ body{
     flex-direction: column;
 }
 
+/* ----------------------- */
 [data-title]{
     font-size: 20px;
 }
