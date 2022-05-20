@@ -117,10 +117,8 @@ const foot = `
                                             style="font-family: Arial; font-size: 9px; font-weight: normal; color: #575756; text-align: center; line-height: 21px; text-decoration: none;"></a><span
                                             style="text-decoration: underline;"><span
                                                 style="color: #575756;"><a
-                                                    href="tel:+48506475881"><span
-                                                        style="color: #575756; text-decoration: underline;">+48
-                                                        506 475
-                                                        881</span></a></span></span><a
+                                                    href="tel:+48533308164"><span
+                                                        style="color: #575756; text-decoration: underline;">+48 533 308 164</span></a></span></span><a
                                             href="mailto:bok@columbusenergy.pl"
                                             style="font-family: Arial; font-size: 9px; font-weight: normal; color: #575756; text-align: center; line-height: 21px; text-decoration: none;"></a>
                                     </td>
