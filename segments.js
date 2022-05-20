@@ -185,7 +185,7 @@ const getImage = (src, href=null)=>{
         return `
             <tr>
                 <td align="center" style="height: 30px"><a
-                        href="${href}"><img
+                        href="${href}" target="_blanc"><img
                         width="550px" style="border-radius: 8px;"
                         src="${src}" /></a>
                 </td>
@@ -255,24 +255,23 @@ const getParagraph = (header, content, img=null, btn1, btn1Link, btn2, btn2Link)
                 style="background: #ffffff; border-radius: 8px; width: 550px;">
                 <tbody>
                     ${image}
-                   
+                    ${getSpace(15)}
                     <tr>
                         <td
                             style="font-family: Arial; font-size: 14px; font-weight: normal; color: #575756; text-align: center; line-height: 21px; padding-left: 15px; padding-right: 15px;">
                             <p dir="ltr"><strong>${header}</strong></p>
-                            <p style="text-align: justify">
+                            <p style="text-align: justify;">
                                 ${content}
-                                
                             </p>
                             ${btns}
+                            ${getSpace(10)}
                         </td>
                     </tr>
-                    
                     ${getSpace(10)}
                 </tbody>
             </table>
         </td>
     </tr>
-    ${getSpace()}
+    ${getSpace(20)}
     `
 }

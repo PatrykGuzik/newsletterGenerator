@@ -1,5 +1,6 @@
 class Field {
 	static fields = [];
+	static save = []
 	static nbFields = 0;
 	static contentNewsletter = [];
 	static newsletterInnerHTML = "";
@@ -8,6 +9,18 @@ class Field {
 		this.nbField = Field.nbFields;
 		Field.nbFields++;
 		Field.fields.push(this);
+	}
+
+	static upload() {
+		Field.save.forEach(element => {
+			console.log(element);
+			element.drawHtmlFields = Field.drawHtmlFields
+		});
+
+		console.log(Field.save);
+		Field.save.forEach(element => {
+			element.drawHtmlFields();
+		})
 	}
 
 	static drawNewsletter() {
@@ -54,6 +67,7 @@ class FieldImage extends Field {
         this.img = ''
         this.link = ''
         this.contentHTML = ''
+		this.type = "image"
 	}
 
 	static makeNewImageField() {
@@ -64,7 +78,7 @@ class FieldImage extends Field {
 	getFieldHTML() {
 		return `
         <div data-n='${this.nbField}' class="field">
-            <input data-n='${this.nbField}l' type="text" placeholder="link do obrazu">
+            <input data-n='${this.nbField}l' type="text" placeholder="link do obrazu" >
             <input data-n='${this.nbField}o' type="text" placeholder="odnośnik">
             <button data-n='${this.nbField}x'>X</button>
         </div>
@@ -119,6 +133,7 @@ class FieldParagraph extends Field {
         this.btn2 = '';
         this.btn2link = ''
         this.contentHTML = ''
+		this.type = "paragraph"
 	}
 
 	static makeNewImageField() {

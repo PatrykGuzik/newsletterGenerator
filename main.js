@@ -1,16 +1,11 @@
 const view = document.querySelector(".view");
 const code = document.querySelector(".code");
 
+Field.save = JSON.parse(localStorage.getItem('save')) 
 
-// 	{ add: getImage("https://carbonfootprintfoundation.com/wp-content/uploads/2021/12/image-21-1-scaled.jpg")},
-// 	{ add: getSpace() },
-// 	{ add: getParagraph("tytuł", "text paragrafu", "https://carbonfootprintfoundation.com/wp-content/uploads/2022/04/nws3.png")},
-// 	{ add: getSpace() },
-// 	{ add: getParagraph("Lorem ipsum", "text paragrafu")},
-// 	{ add: getSpace() },
-// 	{ add: getParagraph("tytuł", "text paragrafu", "https://carbonfootprintfoundation.com/wp-content/uploads/2022/04/nws3.png")}
+console.log(Field.save);
 
-
+Field.upload()
 
 const newsletter = [
 	{ add: head },
@@ -46,6 +41,7 @@ function addParagraphBlock() {
 function update() {
 	Field.drawNewsletter()
 	Field.drawHtmlFields()
+	localStorage.setItem("save", JSON.stringify(Field.fields))
 }
 
 
@@ -62,5 +58,5 @@ function copyHTML(){
 }
 
 // do stylizacji:
-FieldImage.makeNewImageField()
-FieldParagraph.makeNewImageField()
+// FieldImage.makeNewImageField()
+// FieldParagraph.makeNewImageField()
