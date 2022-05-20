@@ -52,6 +52,10 @@
 
         <br>
 
+        <h3>Wyrównanie do środka</h3>
+        <button id="align" type="button" onclick="copyAlign()">kopiuj</button>
+        <div class="copy"><div class="copy">&#x3C;div style=&#x27;text-align:center;&#x27;&#x3E;&#x3C;/div&#x3E;</div>
+
     </div>
 
     <script>
@@ -98,6 +102,12 @@
             const space = document.querySelector("#space")
             navigator.clipboard.writeText("<br><br>");
             wasCopied(space)
+        }
+
+        function copyAlign(){
+            const align = document.querySelector("#align")
+            navigator.clipboard.writeText("<div style='text-align:center;'></div>");
+            wasCopied(align)
         }
 
 
