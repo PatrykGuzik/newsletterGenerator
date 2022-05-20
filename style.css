@@ -84,7 +84,7 @@ button:hover{
     justify-content: center;
 }
 
-.navbar button, .update-btn, #copy-btn{
+.navbar button, .update-btn, #copy-btn, #download-btn{
     border: 2px solid grey;
     color: gray;
     /* width: 200px; */
@@ -100,10 +100,15 @@ button:hover{
     color: rgb(59, 59, 59);
 }
 
-#copy-btn{
-    width: 740px;
+.btn-cont{
+
+}
+
+#copy-btn, #download-btn{
+    width: 367px;
     padding: 8px 0;
 }
+
 
 .update-btn{
     margin-top: 10px;

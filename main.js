@@ -1,11 +1,11 @@
 const view = document.querySelector(".view");
 const code = document.querySelector(".code");
 
-Field.save = JSON.parse(localStorage.getItem('save')) 
+Field.save = JSON.parse(localStorage.getItem("save"));
 
 console.log(Field.save);
 
-Field.upload()
+Field.upload();
 
 const newsletter = [
 	{ add: head },
@@ -25,38 +25,41 @@ view.innerHTML = `
     ${viewHTML}
 `;
 
-code.innerText = viewHTML
-
-
-
+code.innerText = viewHTML;
 
 function addImgBlock() {
-	FieldImage.makeNewImageField()
+	FieldImage.makeNewImageField();
 }
 
 function addParagraphBlock() {
-	FieldParagraph.makeNewImageField()
+	FieldParagraph.makeNewImageField();
 }
 
 function update() {
-	Field.drawNewsletter()
-	Field.drawHtmlFields()
-	localStorage.setItem("save", JSON.stringify(Field.fields))
+	Field.drawNewsletter();
+	Field.drawHtmlFields();
+	localStorage.setItem("save", JSON.stringify(Field.fields));
 }
 
-
-function copyHTML(){
-	const code = document.querySelector(".code-area")
-	const btn = document.querySelector("#copy-btn")
+function copyHTML() {
+	const code = document.querySelector(".code-area");
+	const btn = document.querySelector("#copy-btn");
 	// code.select();
 	navigator.clipboard.writeText(code.innerText);
 
-	btn.innerHTML = "Skopiowano"
+	btn.innerHTML = "Skopiowano";
 	setTimeout(() => {
-		btn.innerHTML = "kopiuj HTML"
+		btn.innerHTML = "kopiuj HTML";
 	}, 2000);
 }
 
+function download() {
+
+
+	var blob = new Blob([viewHTML], { type: "text/plain;charset=utf-8" });
+	saveAs(blob, "newsletter.html");
+}
+
 // do stylizacji:
-// FieldImage.makeNewImageField()
-// FieldParagraph.makeNewImageField()
+FieldImage.makeNewImageField();
+FieldParagraph.makeNewImageField();
