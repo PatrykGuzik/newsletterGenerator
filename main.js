@@ -54,9 +54,7 @@ function copyHTML() {
 }
 
 function download() {
-
-
-	var blob = new Blob([viewHTML], { type: "text/plain;charset=utf-8" });
+	var blob = new Blob([code.innerText], { type: "text/plain;charset=utf-8" });
 	saveAs(blob, "newsletter.html");
 }
 
