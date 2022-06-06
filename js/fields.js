@@ -1,23 +1,20 @@
 class Field {
 	static fields = [];
 	static save = []
-	static nbFields = 0;
+	static nbFields = 1;
 	static contentNewsletter = [];
 	static newsletterInnerHTML = "";
 
 	constructor() {
-		this.nbField = Field.nbFields;
-		Field.nbFields++;
 		Field.fields.push(this);
+		Field.nbFields = Field.fields.length
+		this.nbField = Field.nbFields;
 	}
 
 	static upload() {
 		Field.save.forEach(element => {
-			console.log(element);
 			element.drawHtmlFields = Field.drawHtmlFields
 		});
-
-		console.log(Field.save);
 		Field.save.forEach(element => {
 			element.drawHtmlFields();
 		})
@@ -25,7 +22,6 @@ class Field {
 
 	static drawNewsletter() {
 		Field.newsletterInnerHTML = "";
-
 		Field.newsletterInnerHTML += head;
 		Field.newsletterInnerHTML += getSpace();
 		Field.newsletterInnerHTML += logo;
@@ -46,6 +42,7 @@ class Field {
 	}
 
 	static drawHtmlFields() {
+		console.log(Field.fields);
 		const container = document.querySelector(".container");
 		container.innerHTML = "";
 		Field.fields.forEach(field => {
@@ -81,6 +78,10 @@ class FieldImage extends Field {
             <input data-n='${this.nbField}l' type="text" placeholder="link do obrazu" >
             <input data-n='${this.nbField}o' type="text" placeholder="odnośnik">
             <button data-n='${this.nbField}x'>X</button>
+
+            <div data-up='${this.nbField}'></div>
+            <div data-down='${this.nbField}'></div>
+
         </div>
         `;
 	}
@@ -108,6 +109,13 @@ class FieldImage extends Field {
 					newArray.push(field);
 				}
 			});
+
+			
+			newArray.forEach((element,index) => {
+				element.nbField = index+1
+			});
+			console.log(newArray);
+
 			Field.fields = newArray;
 
 			Field.drawHtmlFields()
@@ -115,9 +123,6 @@ class FieldImage extends Field {
 		});
 	}
 }
-
-
-
 
 
 
@@ -164,6 +169,8 @@ class FieldParagraph extends Field {
 			</div>
 
             <button data-p='${this.nbField}x'>X</button>
+			<div data-up='${this.nbField}'></div>
+            <div data-down='${this.nbField}'></div>
         </div>
         `;
 	}
@@ -208,6 +215,10 @@ class FieldParagraph extends Field {
 				}
 			});
 			Field.fields = newArray;
+			newArray.forEach((element,index) => {
+				element.nbField = index+1
+			});
+			console.log(newArray);
 
 			Field.drawHtmlFields()
             Field.drawNewsletter()

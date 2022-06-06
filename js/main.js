@@ -2,9 +2,6 @@ const view = document.querySelector(".view");
 const code = document.querySelector(".code");
 
 Field.save = JSON.parse(localStorage.getItem("save"));
-
-console.log(Field.save);
-
 Field.upload();
 
 const newsletter = [
@@ -59,5 +56,47 @@ function download() {
 }
 
 // do stylizacji:
-FieldImage.makeNewImageField();
-FieldParagraph.makeNewImageField();
+// FieldImage.makeNewImageField();
+// FieldParagraph.makeNewImageField();
+
+
+console.log(Field.fields);
+
+// góra dół:
+const edit = document.querySelector(".edit")
+
+edit.addEventListener("click", (e)=>{
+
+	// przesuń w górę
+	if (e.target.dataset.up) {
+		const nr = parseInt(e.target.dataset.up) 
+
+		Field.fields.filter(field => field.nbField == nr)[0].nbField = "temp"
+		Field.fields.filter(field => field.nbField == nr-1)[0].nbField += 1
+		Field.fields.filter(field => field.nbField == "temp")[0].nbField = nr-1
+
+		sortAndDrawNewFields()
+		console.log(Field.fields);
+	}
+
+
+	// przesuń w dół
+	if (e.target.dataset.down) {
+		const nr = parseInt(e.target.dataset.down) 
+		Field.fields.filter(field => field.nbField == nr)[0].nbField = "temp"
+		Field.fields.filter(field => field.nbField == nr+1)[0].nbField -= 1
+		Field.fields.filter(field => field.nbField == "temp")[0].nbField = nr+1
+
+		sortAndDrawNewFields()
+		console.log(Field.fields);
+	}
+})
+
+
+function sortAndDrawNewFields() {
+	Field.fields.sort(function(a,b){
+		if(a.nbField > b.nbField) return 1;
+		else return -1;
+	})
+	Field.drawHtmlFields()
+}
