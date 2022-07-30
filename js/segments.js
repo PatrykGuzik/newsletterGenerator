@@ -113,12 +113,19 @@ const foot = `
                                 <tr>
                                     <td
                                         style="font-family: Arial; font-size: 9px; font-weight: normal; color: #fff; text-align: center; line-height: 21px; text-decoration: none;">
+                                        <a href="mailto:office@carbonfootprintfoundation.com"
+                                            style="font-family: Arial; font-size: 9px; font-weight: normal; color: #575756; text-align: center; line-height: 21px; text-decoration: none;">ul. Jasnogórska 9, 31-358 Kraków</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td
+                                        style="font-family: Arial; font-size: 9px; font-weight: normal; color: #fff; text-align: center; line-height: 21px; text-decoration: none;">
                                         <a href="mailto:bok@columbusenergy.pl"
                                             style="font-family: Arial; font-size: 9px; font-weight: normal; color: #575756; text-align: center; line-height: 21px; text-decoration: none;"></a><span
                                             style="text-decoration: underline;"><span
                                                 style="color: #575756;"><a
                                                     href="tel:+48533308164"><span
-                                                        style="color: #575756; text-decoration: underline;">+48 533 308 164</span></a></span></span><a
+                                                        style="color: #575756; text-decoration: underline;">+48 725 500 289</span></a></span></span><a
                                             href="mailto:bok@columbusenergy.pl"
                                             style="font-family: Arial; font-size: 9px; font-weight: normal; color: #575756; text-align: center; line-height: 21px; text-decoration: none;"></a>
                                     </td>
